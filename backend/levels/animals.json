@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the fastest land animal?",
+    "correct": "Cheetah",
+    "wrong": ["Lion", "Gazelle", "Horse"]
+  },
+  {
+    "question": "How many hearts does an octopus have?",
+    "correct": "3",
+    "wrong": ["1", "2", "4"]
+  },
+  {
+    "question": "What is a group of wolves called?",
+    "correct": "Pack",
+    "wrong": ["Herd", "Flock", "Pride"]
+  },
+  {
+    "question": "Which animal has the longest lifespan?",
+    "correct": "Greenland shark",
+    "wrong": ["Elephant", "Tortoise", "Whale"]
+  },
+  {
+    "question": "What is the only mammal capable of true flight?",
+    "correct": "Bat",
+    "wrong": ["Flying squirrel", "Sugar glider", "Colugo"]
+  },
+  {
+    "question": "How many legs does a lobster have?",
+    "correct": "10",
+    "wrong": ["6", "8", "12"]
+  },
+  {
+    "question": "What animal is known for changing its color to camouflage?",
+    "correct": "Chameleon",
+    "wrong": ["Gecko", "Iguana", "Frog"]
+  },
+  {
+    "question": "Which bird is the largest in the world?",
+    "correct": "Ostrich",
+    "wrong": ["Emu", "Albatross", "Condor"]
+  },
+  {
+    "question": "What is a baby kangaroo called?",
+    "correct": "Joey",
+    "wrong": ["Kit", "Cub", "Pup"]
+  },
+  {
+    "question": "Which animal produces pearls?",
+    "correct": "Oyster",
+    "wrong": ["Clam", "Mussel", "Snail"]
+  }
+]

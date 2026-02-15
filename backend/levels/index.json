@@ -1,0 +1,13 @@
+[
+  { "id": "general-knowledge", "name": "General Knowledge" },
+  { "id": "science", "name": "Science" },
+  { "id": "history", "name": "History" },
+  { "id": "geography", "name": "Geography" },
+  { "id": "movies", "name": "Movies" },
+  { "id": "music", "name": "Music" },
+  { "id": "sports", "name": "Sports" },
+  { "id": "food", "name": "Food & Drink" },
+  { "id": "animals", "name": "Animals" },
+  { "id": "technology", "name": "Technology" },
+  { "id": "space", "name": "Space" }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which band released the album 'Abbey Road'?",
+    "correct": "The Beatles",
+    "wrong": ["The Rolling Stones", "Led Zeppelin", "Pink Floyd"]
+  },
+  {
+    "question": "What instrument does a drummer play?",
+    "correct": "Drums",
+    "wrong": ["Guitar", "Bass", "Keyboard"]
+  },
+  {
+    "question": "Who is known as the 'King of Pop'?",
+    "correct": "Michael Jackson",
+    "wrong": ["Elvis Presley", "Prince", "Freddie Mercury"]
+  },
+  {
+    "question": "What genre of music originated in Jamaica?",
+    "correct": "Reggae",
+    "wrong": ["Jazz", "Blues", "Salsa"]
+  },
+  {
+    "question": "How many strings does a standard guitar have?",
+    "correct": "6",
+    "wrong": ["4", "8", "5"]
+  },
+  {
+    "question": "Which artist released the album 'Thriller'?",
+    "correct": "Michael Jackson",
+    "wrong": ["Prince", "Whitney Houston", "Stevie Wonder"]
+  },
+  {
+    "question": "What does the musical term 'forte' mean?",
+    "correct": "Loud",
+    "wrong": ["Soft", "Fast", "Slow"]
+  },
+  {
+    "question": "Which country is K-pop from?",
+    "correct": "South Korea",
+    "wrong": ["Japan", "China", "Thailand"]
+  },
+  {
+    "question": "Who sang 'Bohemian Rhapsody'?",
+    "correct": "Queen",
+    "wrong": ["The Beatles", "Led Zeppelin", "Elton John"]
+  },
+  {
+    "question": "What is the lowest female singing voice called?",
+    "correct": "Contralto",
+    "wrong": ["Soprano", "Mezzo-soprano", "Tenor"]
+  }
+]

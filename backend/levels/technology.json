@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What does HTML stand for?",
+    "correct": "HyperText Markup Language",
+    "wrong": ["High Tech Modern Language", "Home Tool Markup Language", "Hyper Transfer Markup Language"]
+  },
+  {
+    "question": "Who is considered the father of the World Wide Web?",
+    "correct": "Tim Berners-Lee",
+    "wrong": ["Bill Gates", "Steve Jobs", "Mark Zuckerberg"]
+  },
+  {
+    "question": "What year was the first iPhone released?",
+    "correct": "2007",
+    "wrong": ["2005", "2008", "2010"]
+  },
+  {
+    "question": "What does CPU stand for?",
+    "correct": "Central Processing Unit",
+    "wrong": ["Computer Personal Unit", "Central Program Utility", "Core Processing Unit"]
+  },
+  {
+    "question": "Which programming language is known as the 'language of the web'?",
+    "correct": "JavaScript",
+    "wrong": ["Python", "Java", "C++"]
+  },
+  {
+    "question": "What does Wi-Fi stand for?",
+    "correct": "Wireless Fidelity",
+    "wrong": ["Wide Frequency", "Wireless Finder", "Web Interface"]
+  },
+  {
+    "question": "Which company created the Android operating system?",
+    "correct": "Google",
+    "wrong": ["Apple", "Samsung", "Microsoft"]
+  },
+  {
+    "question": "What is the most popular version control system?",
+    "correct": "Git",
+    "wrong": ["SVN", "Mercurial", "CVS"]
+  },
+  {
+    "question": "What does SSD stand for in computer storage?",
+    "correct": "Solid State Drive",
+    "wrong": ["Super Speed Disk", "System Storage Device", "Solid System Drive"]
+  },
+  {
+    "question": "Which company developed the TypeScript programming language?",
+    "correct": "Microsoft",
+    "wrong": ["Google", "Facebook", "Apple"]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What planet is known as the Red Planet?",
+    "correct": "Mars",
+    "wrong": ["Venus", "Jupiter", "Saturn"]
+  },
+  {
+    "question": "How many legs does a spider have?",
+    "correct": "8",
+    "wrong": ["6", "10", "12"]
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "correct": "Pacific Ocean",
+    "wrong": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+  },
+  {
+    "question": "Which element has the chemical symbol 'O'?",
+    "correct": "Oxygen",
+    "wrong": ["Gold", "Osmium", "Oganesson"]
+  },
+  {
+    "question": "In what year did the Titanic sink?",
+    "correct": "1912",
+    "wrong": ["1905", "1920", "1898"]
+  },
+  {
+    "question": "What is the smallest country in the world?",
+    "correct": "Vatican City",
+    "wrong": ["Monaco", "San Marino", "Liechtenstein"]
+  },
+  {
+    "question": "How many bones are in the adult human body?",
+    "correct": "206",
+    "wrong": ["186", "212", "196"]
+  },
+  {
+    "question": "What gas do plants absorb from the atmosphere?",
+    "correct": "Carbon dioxide",
+    "wrong": ["Oxygen", "Nitrogen", "Hydrogen"]
+  },
+  {
+    "question": "Which animal is the tallest in the world?",
+    "correct": "Giraffe",
+    "wrong": ["Elephant", "Ostrich", "Camel"]
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "correct": "Diamond",
+    "wrong": ["Quartz", "Topaz", "Ruby"]
+  }
+]

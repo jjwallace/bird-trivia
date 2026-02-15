@@ -5,7 +5,15 @@ import os from "os";
 import path from "path";
 import { readFileSync, existsSync } from "fs";
 
-const questions = JSON.parse(readFileSync(new URL("./questions.json", import.meta.url), "utf-8"));
+// --- Load levels ---
+const levelsDir = new URL("./levels/", import.meta.url);
+const manifest = JSON.parse(readFileSync(new URL("index.json", levelsDir), "utf-8"));
+const levels = {};
+for (const entry of manifest) {
+  levels[entry.id] = JSON.parse(readFileSync(new URL(`${entry.id}.json`, levelsDir), "utf-8"));
+}
+let currentLevelId = manifest[0].id;
+let currentQuestions = levels[currentLevelId];
 
 const app = express();
 const server = createServer(app);
@@ -74,7 +82,7 @@ let triviaState = {
 };
 
 function prepareQuestion(index) {
-  const q = questions[index];
+  const q = currentQuestions[index];
   const answers = [q.correct, ...q.wrong];
   for (let i = answers.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -205,6 +213,18 @@ function endTrivia() {
 
 io.on("connection", (socket) => {
   console.log(`Socket connected: ${socket.id}`);
+
+  // Send available levels and current selection
+  socket.emit("levels:list", { levels: manifest, current: currentLevelId });
+
+  socket.on("game:select-level", ({ levelId }) => {
+    if (levels[levelId] && !triviaState.active) {
+      currentLevelId = levelId;
+      currentQuestions = levels[levelId];
+      io.emit("levels:selected", { levelId });
+      console.log(`Level changed to: ${levelId}`);
+    }
+  });
 
   socket.on("player:join", ({ name }) => {
     const colorIndex = nextColorIndex % PLAYER_COLORS;

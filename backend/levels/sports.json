@@ -1,0 +1,52 @@
+[
+  {
+    "question": "How many players are on a soccer team on the field?",
+    "correct": "11",
+    "wrong": ["9", "10", "12"]
+  },
+  {
+    "question": "In which sport would you perform a slam dunk?",
+    "correct": "Basketball",
+    "wrong": ["Volleyball", "Tennis", "Football"]
+  },
+  {
+    "question": "What country hosted the 2016 Summer Olympics?",
+    "correct": "Brazil",
+    "wrong": ["China", "England", "Japan"]
+  },
+  {
+    "question": "How many holes are there in a standard round of golf?",
+    "correct": "18",
+    "wrong": ["9", "12", "21"]
+  },
+  {
+    "question": "What is the national sport of Canada?",
+    "correct": "Lacrosse",
+    "wrong": ["Hockey", "Baseball", "Curling"]
+  },
+  {
+    "question": "In tennis, what is a score of zero called?",
+    "correct": "Love",
+    "wrong": ["Nil", "Zero", "Blank"]
+  },
+  {
+    "question": "Which country has won the most FIFA World Cup titles?",
+    "correct": "Brazil",
+    "wrong": ["Germany", "Italy", "Argentina"]
+  },
+  {
+    "question": "What sport is played at Wimbledon?",
+    "correct": "Tennis",
+    "wrong": ["Cricket", "Golf", "Polo"]
+  },
+  {
+    "question": "How long is a marathon in miles (approximately)?",
+    "correct": "26.2 miles",
+    "wrong": ["20 miles", "30 miles", "24 miles"]
+  },
+  {
+    "question": "In baseball, how many strikes make an out?",
+    "correct": "3",
+    "wrong": ["2", "4", "5"]
+  }
+]

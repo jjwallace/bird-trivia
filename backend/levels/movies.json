@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What movie features the quote 'I'll be back'?",
+    "correct": "The Terminator",
+    "wrong": ["Predator", "Total Recall", "Commando"]
+  },
+  {
+    "question": "Who directed Jurassic Park?",
+    "correct": "Steven Spielberg",
+    "wrong": ["James Cameron", "George Lucas", "Ridley Scott"]
+  },
+  {
+    "question": "What is the highest-grossing film of all time (unadjusted)?",
+    "correct": "Avatar",
+    "wrong": ["Avengers: Endgame", "Titanic", "Star Wars: The Force Awakens"]
+  },
+  {
+    "question": "In The Matrix, what color pill does Neo take?",
+    "correct": "Red",
+    "wrong": ["Blue", "Green", "White"]
+  },
+  {
+    "question": "What fictional country is Black Panther from?",
+    "correct": "Wakanda",
+    "wrong": ["Genovia", "Zamunda", "Latveria"]
+  },
+  {
+    "question": "Who played Jack in Titanic?",
+    "correct": "Leonardo DiCaprio",
+    "wrong": ["Brad Pitt", "Matt Damon", "Johnny Depp"]
+  },
+  {
+    "question": "What year was the first Star Wars movie released?",
+    "correct": "1977",
+    "wrong": ["1979", "1980", "1975"]
+  },
+  {
+    "question": "In Finding Nemo, what type of fish is Nemo?",
+    "correct": "Clownfish",
+    "wrong": ["Goldfish", "Angelfish", "Surgeonfish"]
+  },
+  {
+    "question": "Which movie features a character named Forrest Gump?",
+    "correct": "Forrest Gump",
+    "wrong": ["Cast Away", "The Green Mile", "Big"]
+  },
+  {
+    "question": "What is the name of Batman's butler?",
+    "correct": "Alfred",
+    "wrong": ["Jarvis", "Watson", "Jeeves"]
+  }
+]

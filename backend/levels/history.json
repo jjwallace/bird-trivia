@@ -1,0 +1,52 @@
+[
+  {
+    "question": "In what year did World War II end?",
+    "correct": "1945",
+    "wrong": ["1944", "1946", "1943"]
+  },
+  {
+    "question": "Who was the first President of the United States?",
+    "correct": "George Washington",
+    "wrong": ["John Adams", "Thomas Jefferson", "Benjamin Franklin"]
+  },
+  {
+    "question": "The ancient city of Rome is located in which modern country?",
+    "correct": "Italy",
+    "wrong": ["Greece", "Turkey", "Spain"]
+  },
+  {
+    "question": "What wall was built to separate East and West Berlin?",
+    "correct": "Berlin Wall",
+    "wrong": ["Iron Curtain", "Hadrian's Wall", "Great Wall"]
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "correct": "Leonardo da Vinci",
+    "wrong": ["Michelangelo", "Raphael", "Rembrandt"]
+  },
+  {
+    "question": "The French Revolution began in which year?",
+    "correct": "1789",
+    "wrong": ["1776", "1804", "1812"]
+  },
+  {
+    "question": "Which empire was ruled by Genghis Khan?",
+    "correct": "Mongol Empire",
+    "wrong": ["Ottoman Empire", "Roman Empire", "Persian Empire"]
+  },
+  {
+    "question": "What was the name of the ship that brought the Pilgrims to America in 1620?",
+    "correct": "Mayflower",
+    "wrong": ["Santa Maria", "Endeavour", "Beagle"]
+  },
+  {
+    "question": "Who was the Egyptian queen known for her relationship with Julius Caesar and Mark Antony?",
+    "correct": "Cleopatra",
+    "wrong": ["Nefertiti", "Hatshepsut", "Isis"]
+  },
+  {
+    "question": "The Renaissance began in which country?",
+    "correct": "Italy",
+    "wrong": ["France", "England", "Germany"]
+  }
+]

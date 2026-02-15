@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the largest planet in our solar system?",
+    "correct": "Jupiter",
+    "wrong": ["Saturn", "Neptune", "Uranus"]
+  },
+  {
+    "question": "How long does it take light from the Sun to reach Earth?",
+    "correct": "About 8 minutes",
+    "wrong": ["About 1 minute", "About 30 minutes", "About 1 hour"]
+  },
+  {
+    "question": "What is the name of the galaxy we live in?",
+    "correct": "Milky Way",
+    "wrong": ["Andromeda", "Whirlpool", "Sombrero"]
+  },
+  {
+    "question": "Who was the first person to walk on the Moon?",
+    "correct": "Neil Armstrong",
+    "wrong": ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"]
+  },
+  {
+    "question": "What planet is known as the 'Red Planet'?",
+    "correct": "Mars",
+    "wrong": ["Venus", "Mercury", "Jupiter"]
+  },
+  {
+    "question": "What is the hottest planet in our solar system?",
+    "correct": "Venus",
+    "wrong": ["Mercury", "Mars", "Jupiter"]
+  },
+  {
+    "question": "How many planets are in our solar system?",
+    "correct": "8",
+    "wrong": ["7", "9", "10"]
+  },
+  {
+    "question": "What is the closest star to Earth (besides the Sun)?",
+    "correct": "Proxima Centauri",
+    "wrong": ["Alpha Centauri A", "Sirius", "Barnard's Star"]
+  },
+  {
+    "question": "What planet has the most moons?",
+    "correct": "Saturn",
+    "wrong": ["Jupiter", "Uranus", "Neptune"]
+  },
+  {
+    "question": "What is a supernova?",
+    "correct": "An exploding star",
+    "wrong": ["A new star forming", "A black hole", "A type of galaxy"]
+  }
+]

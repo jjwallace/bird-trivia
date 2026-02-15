@@ -19,6 +19,8 @@ export default function Desktop() {
   const [playerNames, setPlayerNames] = useState([]);
   const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState(null);
+  const [levels, setLevels] = useState([]);
+  const [selectedLevel, setSelectedLevel] = useState("");
 
   const lobbyRef = useRef(null);
   const qrRef = useRef(null);
@@ -60,14 +62,27 @@ export default function Desktop() {
       setCountdown(timeLeft > 0 ? timeLeft : null);
     };
 
+    const onLevelsList = ({ levels: lvls, current }) => {
+      setLevels(lvls);
+      setSelectedLevel(current);
+    };
+
+    const onLevelSelected = ({ levelId }) => {
+      setSelectedLevel(levelId);
+    };
+
     socket.on("players:update", onPlayersUpdate);
     socket.on("player:disconnected", onPlayerDisconnected);
     socket.on("trivia:countdown", onCountdown);
+    socket.on("levels:list", onLevelsList);
+    socket.on("levels:selected", onLevelSelected);
 
     return () => {
       socket.off("players:update", onPlayersUpdate);
       socket.off("player:disconnected", onPlayerDisconnected);
       socket.off("trivia:countdown", onCountdown);
+      socket.off("levels:list", onLevelsList);
+      socket.off("levels:selected", onLevelSelected);
     };
   }, []);
 
@@ -130,7 +145,7 @@ export default function Desktop() {
         </button>
       )}
       <div ref={lobbyRef} className="lobby-content">
-        <h1>Trivia Bird</h1>
+        <h1>Bird Trivia</h1>
         <p>Players: {playerCount}</p>
         {playerNames.length > 0 && (
           <ul className="player-list">
@@ -153,6 +168,20 @@ export default function Desktop() {
       <div ref={qrRef} className="qr-container">
         <QRCodeSVG value={MOBILE_URL} size={256} />
       </div>
+      {!started && levels.length > 0 && (
+        <select
+          className="level-select"
+          value={selectedLevel}
+          onChange={(e) => {
+            setSelectedLevel(e.target.value);
+            socket.emit("game:select-level", { levelId: e.target.value });
+          }}
+        >
+          {levels.map((l) => (
+            <option key={l.id} value={l.id}>{l.name}</option>
+          ))}
+        </select>
+      )}
     </div>
   );
 }

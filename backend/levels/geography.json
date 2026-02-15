@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the longest river in the world?",
+    "correct": "Nile",
+    "wrong": ["Amazon", "Mississippi", "Yangtze"]
+  },
+  {
+    "question": "Which continent is the Sahara Desert located on?",
+    "correct": "Africa",
+    "wrong": ["Asia", "Australia", "South America"]
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "correct": "Tokyo",
+    "wrong": ["Osaka", "Kyoto", "Seoul"]
+  },
+  {
+    "question": "Which mountain is the tallest in the world?",
+    "correct": "Mount Everest",
+    "wrong": ["K2", "Kangchenjunga", "Mount Kilimanjaro"]
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "correct": "7",
+    "wrong": ["5", "6", "8"]
+  },
+  {
+    "question": "What country has the largest population in the world?",
+    "correct": "India",
+    "wrong": ["China", "United States", "Indonesia"]
+  },
+  {
+    "question": "Which ocean is the smallest?",
+    "correct": "Arctic Ocean",
+    "wrong": ["Indian Ocean", "Atlantic Ocean", "Southern Ocean"]
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "correct": "Canberra",
+    "wrong": ["Sydney", "Melbourne", "Brisbane"]
+  },
+  {
+    "question": "The Amazon Rainforest is primarily located in which country?",
+    "correct": "Brazil",
+    "wrong": ["Colombia", "Peru", "Venezuela"]
+  },
+  {
+    "question": "Which European country is shaped like a boot?",
+    "correct": "Italy",
+    "wrong": ["Spain", "Greece", "Portugal"]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What country is sushi originally from?",
+    "correct": "Japan",
+    "wrong": ["China", "Korea", "Thailand"]
+  },
+  {
+    "question": "What is the main ingredient in guacamole?",
+    "correct": "Avocado",
+    "wrong": ["Tomato", "Lime", "Onion"]
+  },
+  {
+    "question": "Which nut is used to make marzipan?",
+    "correct": "Almond",
+    "wrong": ["Cashew", "Walnut", "Pistachio"]
+  },
+  {
+    "question": "What Italian dish is made with layers of pasta, cheese, and meat sauce?",
+    "correct": "Lasagna",
+    "wrong": ["Ravioli", "Risotto", "Gnocchi"]
+  },
+  {
+    "question": "What spice gives curry its yellow color?",
+    "correct": "Turmeric",
+    "wrong": ["Paprika", "Saffron", "Cumin"]
+  },
+  {
+    "question": "Which fruit is known as the 'king of fruits' and has a strong smell?",
+    "correct": "Durian",
+    "wrong": ["Mango", "Jackfruit", "Papaya"]
+  },
+  {
+    "question": "What type of pastry is a croissant?",
+    "correct": "Laminated dough",
+    "wrong": ["Shortcrust", "Choux", "Filo"]
+  },
+  {
+    "question": "Which country is Parmesan cheese originally from?",
+    "correct": "Italy",
+    "wrong": ["France", "Switzerland", "Netherlands"]
+  },
+  {
+    "question": "What is the most consumed beverage in the world after water?",
+    "correct": "Tea",
+    "wrong": ["Coffee", "Milk", "Juice"]
+  },
+  {
+    "question": "What grain is used to make traditional Japanese sake?",
+    "correct": "Rice",
+    "wrong": ["Barley", "Wheat", "Corn"]
+  }
+]
