@@ -2,7 +2,8 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import os from "os";
-import { readFileSync } from "fs";
+import path from "path";
+import { readFileSync, existsSync } from "fs";
 
 const questions = JSON.parse(readFileSync(new URL("./questions.json", import.meta.url), "utf-8"));
 
@@ -30,6 +31,15 @@ function getLanIp() {
 app.get("/api/ip", (req, res) => {
   res.json({ ip: getLanIp() });
 });
+
+// In production, serve the built frontend
+const frontendDist = path.resolve(new URL(".", import.meta.url).pathname, "../frontend/dist");
+if (existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(frontendDist, "index.html"));
+  });
+}
 
 // --- Player state ---
 const players = {};
@@ -324,7 +334,7 @@ setInterval(() => {
   }
 }, TICK_RATE);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
   console.log(`LAN IP: ${getLanIp()}`);
