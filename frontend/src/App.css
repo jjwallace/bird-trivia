@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: url("/assets/background.png") center center / cover no-repeat fixed;
+  color: #eee;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.page h1 {
+  font-size: 2rem;
+}
+
+.lobby-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.player-list-item {
+  padding: 0.4rem 1rem;
+  background: #16213e;
+  border: 1px solid #4ade80;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #4ade80;
+}
+
+.start-button {
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: #4ade80;
+  color: #1a1a2e;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.start-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.skip-button {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: #4ade80;
+  color: #1a1a2e;
+  cursor: pointer;
+}
+
+.qr-container {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.qr-container.qr-fixed {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+}
+
+/* --- Phaser Game Canvas --- */
+.game-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.status {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.status.connected {
+  color: #4ade80;
+  opacity: 1;
+}
+
+/* --- Mobile: Name Page --- */
+.mobile-name-page {
+  justify-content: flex-start;
+  padding-top: 3rem;
+}
+
+/* --- Mobile: Name Form --- */
+.name-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.name-input-large {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.name-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #16213e;
+  color: #eee;
+  text-align: center;
+  outline: none;
+}
+
+.name-input:focus {
+  border-color: #4ade80;
+}
+
+.join-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #4ade80;
+  color: #1a1a2e;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* --- Mobile: Name Display (post-join) --- */
+.name-display {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  background: #16213e;
+  border: 2px solid #4ade80;
+  border-radius: 8px;
+  color: #4ade80;
+}
+
+/* --- Mobile: Game Layout --- */
+.mobile-game {
+  justify-content: flex-start;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+/* --- Mobile: Status pinned to bottom --- */
+.status-bottom {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* --- Controls Bar (buttons + joystick centered) --- */
+.controls-bar {
+  position: fixed;
+  bottom: calc(2rem + 20px);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* --- Action Buttons --- */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.action-btn-yellow {
+  background: #b8a038;
+  box-shadow: 0 0 12px rgba(184, 160, 56, 0.4);
+}
+
+.action-btn-yellow:active {
+  background: #9a862e;
+}
+
+.action-btn-blue {
+  background: #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.action-btn-blue:active {
+  background: #2563eb;
+}
+
+/* --- Joystick --- */
+.joystick-area {
+  touch-action: none;
+}
+
+.joystick-outer {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(42, 42, 74, 0.6);
+  border: 2px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.joystick-inner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.7);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* --- Trivia Answer Buttons (Mobile) --- */
+.trivia-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 1rem;
+}
+
+.trivia-answer-btn {
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid #4a5568;
+  border-radius: 12px;
+  background: #16213e;
+  color: #eee;
+  cursor: pointer;
+  transition: opacity 0.4s ease, transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.trivia-answer-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.trivia-answer-btn.selected {
+  border-color: #3b82f6;
+  background: #1e3a5f;
+}
+
+.trivia-answer-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.trivia-answer-btn.correct {
+  border-color: #4ade80;
+  background: #166534;
+  color: #4ade80;
+}
+
+.trivia-answer-btn.wrong {
+  border-color: #ef4444;
+  background: #7f1d1d;
+  color: #ef4444;
+}

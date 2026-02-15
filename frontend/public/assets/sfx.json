@@ -1,0 +1,76 @@
+{
+  "src": [
+    "sfx.webm",
+    "sfx.mp3"
+  ],
+  "sprite": {
+    "player-join": [
+      0,
+      430
+    ],
+    "player-disconnect": [
+      530,
+      856
+    ],
+    "game-start": [
+      1486,
+      4000
+    ],
+    "bird-hit": [
+      5586,
+      2000
+    ],
+    "vfx-explosion": [
+      7686,
+      1000
+    ],
+    "smoke-reveal": [
+      8786,
+      2000
+    ],
+    "question-appear": [
+      10886,
+      1368
+    ],
+    "answers-appear": [
+      12354,
+      480
+    ],
+    "answer-select": [
+      12934,
+      2000
+    ],
+    "answer-correct": [
+      15034,
+      1000
+    ],
+    "answer-wrong": [
+      16134,
+      451
+    ],
+    "timer-tick": [
+      16685,
+      3000
+    ],
+    "timer-warning": [
+      19785,
+      1000
+    ],
+    "timer-expire": [
+      20885,
+      1184
+    ],
+    "player-answered": [
+      22169,
+      471
+    ],
+    "score-point": [
+      22740,
+      1000
+    ],
+    "game-over": [
+      23840,
+      2000
+    ]
+  }
+}

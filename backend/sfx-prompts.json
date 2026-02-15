@@ -1,0 +1,21 @@
+{
+  "player-join": "A happy little bird chirp followed by a squeaky pop, like a chick hatching out of an egg. Cute and welcoming, makes you smile.",
+  "player-disconnect": "A sad single-note slide whistle going down, like a bird falling off a branch. Goofy and deflating, cartoon-style.",
+  "game-start": "A flock of excited birds tweeting in unison building into a silly trumpet fanfare, like a kazoo orchestra. Triumphant but dopey, about 1.5 seconds.",
+  "bird-flap": "A tiny puffy wing flap, soft and feathery like a chubby bird struggling to stay airborne. Think rubber duck crossed with a whoopee cushion, very quick, under 0.2 seconds.",
+  "bird-hit": "A rubbery cartoon bonk with a wobbly spring boing, like a bird flying into a glass window. Slapstick and silly, followed by tiny tweeting stars.",
+  "vfx-shape": "A whimsical sparkly whoosh, like a bird casting a silly spell with its wing. Magical but goofy, like fairy dust mixed with a party blower.",
+  "vfx-explosion": "A big puffy cartoon poof, not a real explosion, more like someone belly-flopping onto a giant bean bag. Over-the-top squishy boom with confetti energy.",
+  "smoke-reveal": "A big dramatic whoooosh of swirling clouds, like a genie appearing from a bottle but fluffier. Theatrical and comedic, like a magician pulling a rubber chicken from a hat. About 1 second.",
+  "question-appear": "Dreamy harp glissando with little bird tweet accents, like a thought bubble popping into existence above someone's head. Whimsical and curious.",
+  "answers-appear": "Four quick bouncy plops in descending pitch, like four eggs dropping into soft nests one by one. Playful and rhythmic, boing-boing-boing-boing.",
+  "answer-select": "A decisive pecking sound, like a bird confidently tapping its beak on a button. Snappy and satisfying with a little click.",
+  "answer-correct": "An enthusiastic two-note bird song going up, like a bird doing a happy little victory dance. Bright and rewarding, the sound of a bird who knows things.",
+  "answer-wrong": "A sad trombone wah-wah but played on a tiny kazoo, like a bird shrugging with its wings. Gently mocking, not mean, just funny and deflating.",
+  "timer-tick": "A soft woodblock tap, like a bird tapping its foot impatiently on a branch. Minimal and rhythmic, subtly comedic.",
+  "timer-warning": "Faster anxious pecking sounds with rising pitch, like a panicking bird running in circles. Urgent but funny, cartoon alarm energy.",
+  "timer-expire": "A cuckoo clock pop followed by a deflating balloon sound, like time ran out and everything went limp. Abrupt and silly.",
+  "player-answered": "A quick little satisfied cluck, like a hen who just laid an egg. Tiny and proud, a miniature accomplishment sound.",
+  "score-point": "A bright twinkly ding with a happy bird trill, like collecting a shiny seed. Rewarding and cute, classic game pickup but with bird flavor.",
+  "game-over": "A dramatic owl hoot transitioning into a silly music-box lullaby, like the birds are all falling asleep on the scoreboard. Finale energy but cozy and funny, about 2 seconds."
+}
