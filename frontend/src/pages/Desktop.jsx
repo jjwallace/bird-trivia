@@ -364,6 +364,7 @@ export default function Desktop() {
     navigator.clipboard.writeText(SAMPLE_GAME);
   };
 
+  const visibleLevels = levels;
 
   const selectLevel = (id) => {
     setSelectedLevel(id);
