@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useParams } from "react-router-dom";
 import gsap from "gsap";
 import socket from "../socket";
 import sfx from "../sfx";
@@ -6,7 +7,12 @@ import Joystick from "../components/Joystick";
 import CelebrationOverlay from "../components/CelebrationOverlay";
 
 export default function Mobile() {
+  const { roomCode: urlRoomCode } = useParams();
+
   const [connected, setConnected] = useState(socket.connected);
+  const [roomJoined, setRoomJoined] = useState(false);
+  const [roomError, setRoomError] = useState("");
+  const [manualCode, setManualCode] = useState("");
   const [name, setName] = useState("");
   const [joined, setJoined] = useState(false);
   const [animationDone, setAnimationDone] = useState(false);
@@ -17,13 +23,42 @@ export default function Mobile() {
   const selectedAnswerRef = useRef(null);
   const nameDisplayRef = useRef(null);
 
+  // Join room on mount if code in URL
+  useEffect(() => {
+    if (!urlRoomCode) return;
+    const joinRoom = () => {
+      socket.emit("room:join", { roomCode: urlRoomCode }, (res) => {
+        if (res.error) {
+          setRoomError("Room not found");
+        } else {
+          setRoomJoined(true);
+        }
+      });
+    };
+    if (socket.connected) joinRoom();
+    else socket.once("connect", joinRoom);
+    return () => socket.off("connect", joinRoom);
+  }, []);
+
+  const handleManualJoin = (e) => {
+    e.preventDefault();
+    const code = manualCode.trim().toUpperCase();
+    if (!code) return;
+    socket.emit("room:join", { roomCode: code }, (res) => {
+      if (res.error) {
+        setRoomError("Room not found");
+      } else {
+        setRoomJoined(true);
+        setRoomError("");
+      }
+    });
+  };
+
   useEffect(() => {
     const onConnect = () => setConnected(true);
     const onDisconnect = () => setConnected(false);
-
     socket.on("connect", onConnect);
     socket.on("disconnect", onDisconnect);
-
     return () => {
       socket.off("connect", onConnect);
       socket.off("disconnect", onDisconnect);
@@ -34,7 +69,6 @@ export default function Mobile() {
     e.preventDefault();
     const trimmed = name.trim();
     if (!trimmed) return;
-
     socket.emit("player:join", { name: trimmed });
     setJoined(true);
   };
@@ -88,15 +122,11 @@ export default function Mobile() {
     };
 
     const onPlayerHit = ({ playerId }) => {
-      if (playerId === socket.id) {
-        sfx.play("bird-hit");
-      }
+      if (playerId === socket.id) sfx.play("bird-hit");
     };
 
     const onVfxPlay = ({ playerId }) => {
-      if (playerId === socket.id) {
-        sfx.play("vfx-explosion");
-      }
+      if (playerId === socket.id) sfx.play("vfx-explosion");
     };
 
     socket.on("trivia:answers", onTriviaAnswers);
@@ -132,10 +162,52 @@ export default function Mobile() {
     socket.emit("player:move-stop");
   }, []);
 
+  // If no room code in URL, show room code entry
+  if (!urlRoomCode && !roomJoined) {
+    return (
+      <div className="page mobile-name-page">
+        <img src="/assets/title.png" className="title-mobile" alt="Trivia Bird" />
+        <form onSubmit={handleManualJoin} className="name-form">
+          <input
+            type="text"
+            value={manualCode}
+            onChange={(e) => { setManualCode(e.target.value); setRoomError(""); }}
+            placeholder="Enter room code"
+            maxLength={8}
+            autoFocus
+            className="name-input name-input-large"
+            style={{ textTransform: "uppercase" }}
+          />
+          <button type="submit" className="join-button">Join Room</button>
+          {roomError && <p style={{ color: "#ef4444", marginTop: "0.5rem" }}>{roomError}</p>}
+        </form>
+        <p className="status-bottom">
+          <span className={`status ${connected ? "connected" : ""}`}>
+            Socket: {connected ? "Connected" : "Disconnected"}
+          </span>
+        </p>
+      </div>
+    );
+  }
+
+  // Waiting for room join via URL
+  if (urlRoomCode && !roomJoined) {
+    return (
+      <div className="page mobile-name-page">
+        <img src="/assets/title.png" className="title-mobile" alt="Trivia Bird" />
+        {roomError ? (
+          <p style={{ color: "#ef4444" }}>{roomError}</p>
+        ) : (
+          <p>Joining room...</p>
+        )}
+      </div>
+    );
+  }
+
   if (!joined) {
     return (
       <div className="page mobile-name-page">
-        <h1>Trivia Bird</h1>
+        <img src="/assets/title.png" className="title-mobile" alt="Trivia Bird" />
         <form onSubmit={handleJoin} className="name-form">
           <input
             id="name-input"
